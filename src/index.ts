@@ -1,0 +1,1 @@
+export { withMegaphone } from "./withMegaphone";
