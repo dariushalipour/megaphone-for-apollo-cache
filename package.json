@@ -1,14 +1,19 @@
 {
   "name": "megaphone-for-apollo-cache",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Reflect Apollo Cache updates on all open tabs",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/dts/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/dts/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-cjs": "tsc -p tsconfig-cjs.json",
-    "build-esm": "tsc -p tsconfig.json",
-    "build": "npm-run-all --parallel build-cjs build-esm"
+    "build": "zoboz build"
   },
   "repository": {
     "type": "git",
@@ -27,12 +32,13 @@
   },
   "homepage": "https://github.com/dariushalipour/megaphone-for-apollo-cache#readme",
   "devDependencies": {
-    "typescript": "^4.6.3",
     "@apollo/client": "^3.5.10",
+    "@zoboz/core": "^3.0.1",
     "graphql": "^16.3.0",
-    "npm-run-all": "^4.1.5"
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
     "@apollo/client": "^3.5.10"
-  }
+  },
+  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
 }
