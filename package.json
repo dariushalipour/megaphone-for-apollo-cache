@@ -1,6 +1,6 @@
 {
   "name": "megaphone-for-apollo-cache",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Reflect Apollo Cache updates on all open tabs",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -26,7 +26,7 @@
     "apollo-cache"
   ],
   "author": "Dariush Alipour <drsh.alipour@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dariushalipour/megaphone-for-apollo-cache/issues"
   },
